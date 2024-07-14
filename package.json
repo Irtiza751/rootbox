@@ -1,0 +1,17 @@
+{
+  "name": "rootbox",
+  "version": "1.0.0",
+  "description": "Rootbox",
+  "main": "index.js",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev"
+  },
+  "keywords": [],
+  "author": "Muhammad Irtiza",
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "^2.0.6"
+  },
+  "packageManager": "pnpm@8.12.1"
+}

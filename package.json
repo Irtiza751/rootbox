@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev"
+    "dev": "turbo run dev",
+    "build:rootbox": "turbo run build --filter=@rootbox/base",
+    "build:playground": "turbo run build --filter=playground",
+    "dev:rootbox": "turbo run dev --filter=@rootbox/base",
+    "dev:playground": "turbo run dev --filter=playground"
   },
   "keywords": [],
   "author": "Muhammad Irtiza",

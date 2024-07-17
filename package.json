@@ -9,7 +9,8 @@
     "build:rootbox": "turbo run build --filter=@rootbox/base",
     "build:playground": "turbo run build --filter=playground",
     "dev:rootbox": "turbo run dev --filter=@rootbox/base",
-    "dev:playground": "turbo run dev --filter=playground"
+    "dev:playground": "turbo run dev --filter=playground",
+    "clean": "turbo run clean --filter=@rootbox/base"
   },
   "keywords": [],
   "author": "Muhammad Irtiza",

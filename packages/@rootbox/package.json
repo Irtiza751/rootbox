@@ -2,14 +2,9 @@
   "name": "@rootbox/base",
   "version": "1.0.0",
   "description": "base library of the rootbox",
-  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
-  },
+  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",

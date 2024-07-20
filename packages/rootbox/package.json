@@ -1,5 +1,5 @@
 {
-  "name": "@rootbox/base",
+  "name": "rootbox",
   "version": "1.0.0",
   "description": "base library of the rootbox",
   "types": "./dist/index.d.ts",

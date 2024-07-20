@@ -6,11 +6,11 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "build:rootbox": "turbo run build --filter=@rootbox/base",
+    "build:rootbox": "turbo run build --filter=rootbox",
     "build:playground": "turbo run build --filter=playground",
-    "dev:rootbox": "turbo run dev --filter=@rootbox/base",
+    "dev:rootbox": "turbo run dev --filter=rootbox",
     "dev:playground": "turbo run dev --filter=playground",
-    "clean": "turbo run clean --filter=@rootbox/base"
+    "clean": "turbo run clean --filter=rootbox"
   },
   "keywords": [],
   "author": "Muhammad Irtiza",

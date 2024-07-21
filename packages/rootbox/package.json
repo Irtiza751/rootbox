@@ -1,7 +1,7 @@
 {
   "name": "rootbox",
   "version": "1.0.0",
-  "description": "base library of the rootbox",
+  "description": "Data structures & Algorithm library",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.mjs",
   "main": "./dist/index.js",
@@ -17,6 +17,9 @@
     "tsup": "^8.1.1",
     "typescript": "^5.5.3"
   },
+  "files": [
+    "dist/**"
+  ],
   "author": "Muhammad Irtiza",
   "license": "MIT",
   "keywords": [

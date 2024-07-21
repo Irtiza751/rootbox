@@ -10,7 +10,8 @@
     "build:playground": "turbo run build --filter=playground",
     "dev:rootbox": "turbo run dev --filter=rootbox",
     "dev:playground": "turbo run dev --filter=playground",
-    "clean": "turbo run clean --filter=rootbox"
+    "clean": "turbo run clean --filter=rootbox",
+    "publish": "turbo run build lint test && changeset version && changeset publish"
   },
   "keywords": [],
   "author": "Muhammad Irtiza",
@@ -18,5 +19,8 @@
   "devDependencies": {
     "turbo": "^2.0.6"
   },
-  "packageManager": "pnpm@8.12.1"
+  "packageManager": "pnpm@8.12.1",
+  "dependencies": {
+    "@changesets/cli": "^2.27.7"
+  }
 }

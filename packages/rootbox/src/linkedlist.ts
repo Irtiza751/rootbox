@@ -7,8 +7,56 @@ class Vertex<T> {
   }
 }
 
-class LinkedList {
+export class LinkedList<T> {
+  private head: Vertex<T> | null;
+  private tail: Vertex<T> | null;
+  public size: number = 0;
+
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+
   /**
-   * @Todo implement linked list
+   * @description
+   * Insert the node at the end of the list
    */
+  append(data: T) {
+    const vertex = new Vertex(data);
+    if (!this.head) {
+      this.head = vertex;
+      this.tail = this.head;
+    } else if (this.tail) {
+      this.tail.next = vertex;
+      this.tail = vertex;
+    }
+  }
+  /**
+   * @description
+   * Insert the node in the front of the list
+   */
+  prepend(data: T) {
+    const vertex = new Vertex(data);
+    if (!this.head) {
+      this.head = vertex;
+      this.tail = this.head;
+    } else {
+      vertex.next = this.head;
+      this.head = vertex;
+    }
+
+    this.size++;
+  }
+
+  /**
+   * @description
+   * Insert the node at any index provided or at end of the list.
+   */
+  insert(data: T, index: number) {}
+
+  /**
+   * @description
+   * find the node of matched the provided data;
+   */
+  find(data: T) {}
 }

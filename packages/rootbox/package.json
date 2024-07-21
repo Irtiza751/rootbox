@@ -16,5 +16,13 @@
     "@types/node": "^20.14.10",
     "tsup": "^8.1.1",
     "typescript": "^5.5.3"
-  }
+  },
+  "author": "Muhammad Irtiza",
+  "license": "MIT",
+  "keywords": [
+    "DSA",
+    "Data structures",
+    "Algorithm",
+    "Data structures & Algorithm"
+  ]
 }

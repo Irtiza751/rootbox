@@ -56,7 +56,13 @@ export class LinkedList<T> {
 
   /**
    * @description
-   * find the node of matched the provided data;
+   * find the node if matched with the provided data;
    */
   find(data: T) {}
+
+  /**
+   * @description
+   * delete the node if matched with the provided data;
+   */
+  delete(data: T) {}
 }

@@ -51,18 +51,28 @@ export class LinkedList<T> {
   /**
    * @description
    * Insert the node at any index provided or at end of the list.
+   * @return void
    */
   insert(data: T, index: number) {}
 
   /**
    * @description
    * find the node if matched with the provided data;
+   * @return Vertex
    */
   find(data: T) {}
 
   /**
    * @description
-   * delete the node if matched with the provided data;
+   * remove the node if matched with the provided data;
+   * @return Vertex
    */
-  delete(data: T) {}
+  remove(data: T) {}
+  
+  /**
+   * @description
+   * remvoe the last node (tail) of the linkedlist;
+   * @return Vertex
+   */
+  removeLast() {}
 }

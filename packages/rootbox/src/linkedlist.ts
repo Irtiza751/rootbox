@@ -31,6 +31,7 @@ export class LinkedList<T> {
       this.tail = vertex;
     }
   }
+
   /**
    * @description
    * Insert the node in the front of the list
@@ -68,11 +69,18 @@ export class LinkedList<T> {
    * @return Vertex
    */
   remove(data: T) {}
-  
+
   /**
    * @description
    * remvoe the last node (tail) of the linkedlist;
    * @return Vertex
    */
   removeLast() {}
+
+  /**
+   * @description
+   * remvoe the fist node (head) of the linkedlist;
+   * @return Vertex
+   */
+  removeFirst() {}
 }

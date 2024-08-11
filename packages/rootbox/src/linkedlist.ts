@@ -30,6 +30,7 @@ export class LinkedList<T> {
       this.tail.next = vertex;
       this.tail = vertex;
     }
+    this.size++;
   }
 
   /**
@@ -61,7 +62,15 @@ export class LinkedList<T> {
    * find the node if matched with the provided data;
    * @return Vertex
    */
-  find(data: T) {}
+  find(data: T) {
+    let current = this.head;
+    while (current?.next) {
+      if (current.data === data) {
+        return current;
+      }
+      current = current.next;
+    }
+  }
 
   /**
    * @description

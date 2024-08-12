@@ -5,16 +5,19 @@ const stack = new Stack();
 const list = new LinkedList<number>();
 
 stack.push(10);
-stack.push(10);
-stack.push(10);
-stack.push(10);
+stack.push(20);
+stack.push(30);
+stack.push(40);
 
 // console.log(stack);
 
 list.append(10);
 list.append(20);
 list.append(30);
-list.prepend(9);
-list.prepend(8);
+list.append(40);
 
 console.log(list);
+
+const vertex = list.find(30);
+
+console.log("find: ", vertex);

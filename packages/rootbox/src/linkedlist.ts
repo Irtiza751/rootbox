@@ -77,6 +77,13 @@ export class LinkedList<T> {
    * remove the node if matched with the provided data;
    * @return Vertex
    */
+  findIndex(data: T) {}
+  
+  /**
+   * @description
+   * remove the node if matched with the provided data;
+   * @return Vertex
+   */
   remove(data: T) {}
 
   /**

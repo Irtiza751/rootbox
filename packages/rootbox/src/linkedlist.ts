@@ -77,7 +77,17 @@ export class LinkedList<T> {
    * remove the node if matched with the provided data;
    * @return Vertex
    */
-  findIndex(data: T) {}
+  findIndex(data: T) {
+    let index = 0;
+    let current = this.head;
+    while (current?.next) {
+      index++;
+      if (current.data === data) {
+        break;
+      }
+      current = current.next;
+    }
+  }
   
   /**
    * @description

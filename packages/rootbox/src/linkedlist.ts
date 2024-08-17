@@ -81,14 +81,14 @@ export class LinkedList<T> {
     let index = 0;
     let current = this.head;
     while (current?.next) {
-      index++;
       if (current.data === data) {
-        break;
+        return index;
       }
+      index++;
       current = current.next;
     }
   }
-  
+
   /**
    * @description
    * remove the node if matched with the provided data;

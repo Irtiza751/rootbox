@@ -1,8 +1,10 @@
 import "./style.css";
 import { Stack, LinkedList } from "rootbox";
+import { Query } from "rawql";
 
 const stack = new Stack();
 const list = new LinkedList<number>();
+const query = new Query();
 
 stack.push(10);
 stack.push(20);
@@ -29,3 +31,4 @@ console.log("find index: ", list.findIndex(40));
 console.log("find by index: ", list.at(3));
 
 console.log(list);
+console.log(query.select("name", "age", "gender").from("user").build());

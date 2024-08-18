@@ -18,6 +18,9 @@ importers:
 
   apps/playground:
     dependencies:
+      rawql:
+        specifier: workspace:*
+        version: link:../../packages/rawq
       rootbox:
         specifier: workspace:^
         version: link:../../packages/rootbox

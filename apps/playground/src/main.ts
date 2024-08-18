@@ -18,7 +18,9 @@ list.append(40);
 list.append(50);
 list.append(60);
 
-console.log(list);
+list.print();
+list.insert(35, 3); // 10 -> 20 -> 30 -> 35 -> 40 -> 50 -> 60
+list.print();
 
 const vertex = list.find(30);
 const index = list.findIndex(40);

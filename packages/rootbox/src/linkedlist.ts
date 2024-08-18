@@ -109,4 +109,21 @@ export class LinkedList<T> {
    * @return Vertex
    */
   removeFirst() {}
+
+  /**
+   * @description
+   * print the complete linked list.
+   * @return Vertex
+   */
+  print() {
+    let list = "";
+    let current = this.head;
+
+    while (current?.next) {
+      current = current.next;
+      list += current.data + (current.next ? " => " : "");
+    }
+
+    console.log(list);
+  }
 }

@@ -24,6 +24,8 @@ list.print();
 
 const vertex = list.find(30);
 const index = list.findIndex(40);
+const item = list.findByIndex(3);
 
 console.log("find: ", vertex);
 console.log("find index: ", index);
+console.log("find by index: ", item);

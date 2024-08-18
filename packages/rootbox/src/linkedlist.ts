@@ -91,6 +91,23 @@ export class LinkedList<T> {
 
   /**
    * @description
+   * find the node by its index.
+   * @return Vertex
+   */
+  findByIndex(index: number) {
+    let current = this.head;
+    let count = 0;
+    while (current?.next) {
+      if (count === index) {
+        return current;
+      }
+      count++;
+      current = current.next;
+    }
+  }
+
+  /**
+   * @description
    * remove the node if matched with the provided data;
    * @return Vertex
    */

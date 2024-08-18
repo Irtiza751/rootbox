@@ -41,12 +41,11 @@ export class LinkedList<T> {
     const vertex = new Vertex(data);
     if (!this.head) {
       this.head = vertex;
-      this.tail = this.head;
+      this.tail = vertex;
     } else {
       vertex.next = this.head;
       this.head = vertex;
     }
-
     this.size++;
   }
 
@@ -55,7 +54,25 @@ export class LinkedList<T> {
    * Insert the node at any index provided or at end of the list.
    * @return void
    */
-  insert(data: T, index: number) {}
+  insert(data: T, index: number) {
+    if (index <= 0) {
+      return this.prepend(data);
+    }
+
+    if (index >= this.size) {
+      return this.append(data);
+    }
+
+    const vrtx = new Vertex(data);
+    const prev = this.at(index - 1);
+    const next = this.at(index);
+
+    if (prev && next) {
+      vrtx.next = next;
+      prev.next = vrtx;
+    }
+    this.size++;
+  }
 
   /**
    * @description
@@ -137,8 +154,8 @@ export class LinkedList<T> {
     let current = this.head;
 
     while (current?.next) {
+      list += current.data + (current.next.next ? " => " : "");
       current = current.next;
-      list += current.data + (current.next ? " => " : "");
     }
 
     console.log(list);

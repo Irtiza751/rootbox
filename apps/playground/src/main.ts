@@ -20,12 +20,9 @@ list.append(60);
 
 list.print();
 list.insert(35, 3); // 10 -> 20 -> 30 -> 35 -> 40 -> 50 -> 60
+console.warn("List after insert");
 list.print();
 
-const vertex = list.find(30);
-const index = list.findIndex(40);
-const item = list.findByIndex(3);
-
-console.log("find: ", vertex);
-console.log("find index: ", index);
-console.log("find by index: ", item);
+console.log("find: ", list.find(30));
+console.log("find index: ", list.findIndex(40));
+console.log("find by index: ", list.at(3));

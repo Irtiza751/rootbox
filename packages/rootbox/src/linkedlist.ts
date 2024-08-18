@@ -94,7 +94,7 @@ export class LinkedList<T> {
    * find the node by its index.
    * @return Vertex
    */
-  findByIndex(index: number) {
+  at(index: number) {
     let current = this.head;
     let count = 0;
     while (current?.next) {

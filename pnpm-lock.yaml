@@ -18,6 +18,9 @@ importers:
 
   apps/playground:
     dependencies:
+      rawql:
+        specifier: workspace:*
+        version: link:../../packages/rawq
       rootbox:
         specifier: workspace:^
         version: link:../../packages/rootbox
@@ -28,6 +31,24 @@ importers:
       vite:
         specifier: ^5.3.4
         version: 5.3.4
+
+  packages/rawq:
+    devDependencies:
+      '@swc/core':
+        specifier: ^1.6.13
+        version: 1.6.13(@swc/helpers@0.5.12)
+      '@swc/helpers':
+        specifier: ^0.5.12
+        version: 0.5.12
+      '@types/node':
+        specifier: ^20.14.10
+        version: 20.14.10
+      tsup:
+        specifier: ^8.1.1
+        version: 8.1.1(@swc/core@1.6.13)(typescript@5.5.4)
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
 
   packages/rootbox:
     devDependencies:
@@ -2158,6 +2179,49 @@ packages:
       - yaml
     dev: true
 
+  /tsup@8.1.1(@swc/core@1.6.13)(typescript@5.5.4):
+    resolution: {integrity: sha512-lLXP3BshJ6y/32b3tPZUB2siD2mkJ6mLzhbPOShfjogSc3aRw8MhbBV4cPKbqkbXuhsJR+c9B0W9RHMbtbXLMQ==}
+    engines: {node: '>=18'}
+    hasBin: true
+    peerDependencies:
+      '@microsoft/api-extractor': ^7.36.0
+      '@swc/core': ^1
+      postcss: ^8.4.12
+      typescript: '>=4.5.0'
+    peerDependenciesMeta:
+      '@microsoft/api-extractor':
+        optional: true
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@swc/core': 1.6.13(@swc/helpers@0.5.12)
+      bundle-require: 5.0.0(esbuild@0.23.0)
+      cac: 6.7.14
+      chokidar: 3.6.0
+      consola: 3.2.3
+      debug: 4.3.5
+      esbuild: 0.23.0
+      execa: 5.1.1
+      globby: 11.1.0
+      joycon: 3.1.1
+      postcss-load-config: 6.0.1
+      resolve-from: 5.0.0
+      rollup: 4.18.1
+      source-map: 0.8.0-beta.0
+      sucrase: 3.35.0
+      tree-kill: 1.2.2
+      typescript: 5.5.4
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
+      - tsx
+      - yaml
+    dev: true
+
   /turbo-darwin-64@2.0.6:
     resolution: {integrity: sha512-XpgBwWj3Ggmz/gQVqXdMKXHC1iFPMDiuwugLwSzE7Ih0O13JuNtYZKhQnopvbDQnFQCeRq2Vsm5OTWabg/oB/g==}
     cpu: [x64]
@@ -2220,6 +2284,12 @@ packages:
 
   /typescript@5.5.3:
     resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
+  /typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true

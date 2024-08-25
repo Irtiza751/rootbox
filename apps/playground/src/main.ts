@@ -34,9 +34,14 @@ console.warn("Remove last item from list");
 list.removeLast();
 list.print();
 
+console.warn("Remove item at 2 from list");
+list.remove(2);
+list.print();
+
 console.log("find: ", list.find(30));
 console.log("find index: ", list.findIndex(40));
 console.log("find by index: ", list.at(3));
 
+list.print();
 console.log(list);
 // console.log(query.select("name", "age", "gender").from("user").build());

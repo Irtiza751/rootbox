@@ -129,10 +129,23 @@ export class LinkedList<T> {
 
   /**
    * @description
-   * remove the node if matched with the provided data;
+   * remove the node from the provided index;
    * @return Vertex
    */
-  remove(data: T) {}
+  remove(index: number) {
+    if (index >= this.size) return this.removeLast();
+    if (index <= 0) return this.removeFirst();
+
+    const prev = this.at(index - 1);
+    const temp = this.at(index);
+
+    if (prev && temp) {
+      prev.next = temp.next;
+    }
+
+    this.size--;
+    return temp;
+  }
 
   /**
    * @description

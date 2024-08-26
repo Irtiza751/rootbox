@@ -31,6 +31,7 @@ export class LinkedList<T> {
       this.tail = vertex;
     }
     this.size++;
+    return this.tail;
   }
 
   /**
@@ -47,6 +48,7 @@ export class LinkedList<T> {
       this.head = vertex;
     }
     this.size++;
+    return this.head;
   }
 
   /**
@@ -72,6 +74,7 @@ export class LinkedList<T> {
       prev.next = vrtx;
     }
     this.size++;
+    return this.head;
   }
 
   /**
@@ -114,35 +117,66 @@ export class LinkedList<T> {
   at(index: number) {
     let current = this.head;
     let count = 0;
-    while (current?.next) {
+    while (current) {
       if (count === index) {
         return current;
       }
       count++;
       current = current.next;
     }
+    return null;
   }
 
   /**
    * @description
-   * remove the node if matched with the provided data;
+   * remove the node from the provided index;
    * @return Vertex
    */
-  remove(data: T) {}
+  remove(index: number) {
+    if (index >= this.size) return this.removeLast();
+    if (index <= 0) return this.removeFirst();
+
+    const prev = this.at(index - 1);
+    const temp = this.at(index);
+
+    if (prev && temp) {
+      prev.next = temp.next;
+    }
+
+    this.size--;
+    return temp;
+  }
 
   /**
    * @description
    * remvoe the last node (tail) of the linkedlist;
    * @return Vertex
    */
-  removeLast() {}
+  removeLast() {
+    if (!this.tail) return null;
+    const temp = this.tail;
+    const prev = this.at(this.size - 2);
+    if (prev) {
+      prev.next = null;
+      this.tail = prev;
+    }
+
+    this.size--;
+    return temp;
+  }
 
   /**
    * @description
    * remvoe the fist node (head) of the linkedlist;
    * @return Vertex
    */
-  removeFirst() {}
+  removeFirst() {
+    if (!this.head) return null;
+    const temp = this.head;
+    this.head = this.head.next;
+    this.size--;
+    return temp;
+  }
 
   /**
    * @description
@@ -153,8 +187,8 @@ export class LinkedList<T> {
     let list = "";
     let current = this.head;
 
-    while (current?.next) {
-      list += current.data + (current.next.next ? " => " : "");
+    while (current) {
+      list += current.data + (current.next ? " => " : "");
       current = current.next;
     }
 

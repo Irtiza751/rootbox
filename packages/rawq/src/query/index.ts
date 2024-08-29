@@ -19,6 +19,8 @@ export class Query {
     return this;
   }
 
+  insert(...args: string[]) {}
+
   build() {
     this.query = `SELECT ${this.columns} FROM ${this.table}`;
     if(this.where) this.query += ` WHERE ${this.where}`;

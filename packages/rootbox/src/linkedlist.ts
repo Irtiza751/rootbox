@@ -180,6 +180,13 @@ export class LinkedList<T> {
 
   /**
    * @description
+   * reverse the order of the linkedlist.
+   * @return LinkedList
+   */
+  reverse() {}
+
+  /**
+   * @description
    * print the complete linked list.
    * @return Vertex
    */

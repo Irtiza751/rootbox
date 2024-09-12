@@ -2,7 +2,7 @@ export class Query {
   private query: string = "";
   private columns: string = "";
   private table: string = "";
-  private where: string = "";
+  private predicate: string = "";
 
   select(...args: string[]) {
     this.columns = args.join(", ");
@@ -15,13 +15,13 @@ export class Query {
   }
 
   where(predicate: string) {
-    this.where = table;
+    this.predicate = predicate;
     return this;
   }
 
   build() {
     this.query = `SELECT ${this.columns} FROM ${this.table}`;
-    if(this.where) this.query += ` WHERE ${this.where}`;
+    if (this.predicate) this.query += ` WHERE ${this.predicate}`;
     return this.query;
   }
 }
